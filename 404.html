@@ -1,0 +1,7 @@
+<script>
+  // Chuyển hướng về index.html
+  const redirectTo = "/Assignment3_NodeJS";
+  const path = window.location.pathname.replace(redirectTo, "");
+  const newUrl = redirectTo + "/index.html#" + path;
+  window.location.replace(newUrl);
+</script>
