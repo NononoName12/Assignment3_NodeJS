@@ -1,7 +1,17 @@
-<script>
+<!-- <script>
   // Chuyển hướng về index.html
   const redirectTo = "/Assignment3_NodeJS";
   const path = window.location.pathname.replace(redirectTo, "");
   const newUrl = redirectTo + "/index.html#" + path;
   window.location.replace(newUrl);
+</script> -->
+<script>
+  // URL gốc của ứng dụng
+  const baseUrl = "https://nonononame12.github.io/Assignment3_NodeJS/";
+
+  // Kiểm tra nếu URL hiện tại không phải là URL gốc
+  if (window.location.href !== baseUrl) {
+    // Chuyển hướng về URL gốc
+    window.location.replace(baseUrl);
+  }
 </script>
