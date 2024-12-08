@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Assignment3_NodeJS/static/css/main.8aabc418.css",
-    "main.js": "/Assignment3_NodeJS/static/js/main.5b5bf9bc.js",
+    "main.js": "/Assignment3_NodeJS/static/js/main.e08db70b.js",
     "static/js/422.96f95947.chunk.js": "/Assignment3_NodeJS/static/js/422.96f95947.chunk.js",
     "static/media/product_2.png": "/Assignment3_NodeJS/static/media/product_2.1bc52f8922d488cead68.png",
     "static/media/product_3.png": "/Assignment3_NodeJS/static/media/product_3.48eda5293a6f605e73f7.png",
@@ -11,11 +11,11 @@
     "static/media/banner1.jpg": "/Assignment3_NodeJS/static/media/banner1.4a22881c941f7b645fa8.jpg",
     "index.html": "/Assignment3_NodeJS/index.html",
     "main.8aabc418.css.map": "/Assignment3_NodeJS/static/css/main.8aabc418.css.map",
-    "main.5b5bf9bc.js.map": "/Assignment3_NodeJS/static/js/main.5b5bf9bc.js.map",
+    "main.e08db70b.js.map": "/Assignment3_NodeJS/static/js/main.e08db70b.js.map",
     "422.96f95947.chunk.js.map": "/Assignment3_NodeJS/static/js/422.96f95947.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8aabc418.css",
-    "static/js/main.5b5bf9bc.js"
+    "static/js/main.e08db70b.js"
   ]
 }
