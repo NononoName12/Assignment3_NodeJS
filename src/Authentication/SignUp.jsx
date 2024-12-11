@@ -51,14 +51,17 @@ function SignUp(props) {
     };
     console.log(inputSignup);
     try {
-      const response = await fetch("http://localhost:5000/auth/signup", {
-        method: "POST", // Chỉ định phương thức POST
-        headers: {
-          "Content-Type": "application/json", // Đặt tiêu đề Content-Type nếu cần
-        },
-        body: JSON.stringify(inputSignup), // Chuyển đổi inputLogin thành chuỗi JSON và thêm vào body
-        credentials: "include", // Bao gồm cookie trong yêu cầu
-      });
+      const response = await fetch(
+        "https://backend-nodejs-lke6.onrender.com/auth/signup",
+        {
+          method: "POST", // Chỉ định phương thức POST
+          headers: {
+            "Content-Type": "application/json", // Đặt tiêu đề Content-Type nếu cần
+          },
+          body: JSON.stringify(inputSignup), // Chuyển đổi inputLogin thành chuỗi JSON và thêm vào body
+          credentials: "include", // Bao gồm cookie trong yêu cầu
+        }
+      );
 
       const responseData = await response.json();
       if (!response.ok) {

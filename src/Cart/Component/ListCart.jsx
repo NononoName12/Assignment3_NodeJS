@@ -39,14 +39,17 @@ function ListCart(props) {
     if (confirmDelete) {
       console.log(userId, productId);
       try {
-        const response = await fetch(`http://localhost:5000/cart/remove`, {
-          method: "POST", // Sử dụng phương thức POST
-          headers: {
-            "Content-Type": "application/json", // Thiết lập loại nội dung là JSON
-          },
-          body: JSON.stringify({ userId, productId }), // Chuyển đổi đối tượng thành chuỗi JSON
-          credentials: "include", // Bao gồm cookie trong yêu cầu
-        });
+        const response = await fetch(
+          `https://backend-nodejs-lke6.onrender.com/cart/remove`,
+          {
+            method: "POST", // Sử dụng phương thức POST
+            headers: {
+              "Content-Type": "application/json", // Thiết lập loại nội dung là JSON
+            },
+            body: JSON.stringify({ userId, productId }), // Chuyển đổi đối tượng thành chuỗi JSON
+            credentials: "include", // Bao gồm cookie trong yêu cầu
+          }
+        );
 
         if (!response.ok) {
           throw new Error(

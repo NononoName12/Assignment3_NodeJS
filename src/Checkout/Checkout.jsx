@@ -65,7 +65,7 @@ function Checkout(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "http://localhost:5000/cart";
+        const url = "https://backend-nodejs-lke6.onrender.com/cart";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -133,14 +133,17 @@ function Checkout(props) {
 
     console.log(inputOrder);
     try {
-      const response = await fetch("http://localhost:5000/checkout", {
-        method: "POST", // Chỉ định phương thức POST
-        headers: {
-          "Content-Type": "application/json", // Đặt tiêu đề Content-Type nếu cần
-        },
-        body: JSON.stringify(inputOrder),
-        credentials: "include", // Bao gồm cookie trong yêu cầu
-      });
+      const response = await fetch(
+        "https://backend-nodejs-lke6.onrender.com/checkout",
+        {
+          method: "POST", // Chỉ định phương thức POST
+          headers: {
+            "Content-Type": "application/json", // Đặt tiêu đề Content-Type nếu cần
+          },
+          body: JSON.stringify(inputOrder),
+          credentials: "include", // Bao gồm cookie trong yêu cầu
+        }
+      );
 
       const responseData = await response.json();
       if (!response.ok) {

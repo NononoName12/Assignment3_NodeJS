@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Assignment3_NodeJS/static/css/main.8aabc418.css",
+    "main.js": "/Assignment3_NodeJS/static/js/main.76de7015.js",
+    "static/js/422.96f95947.chunk.js": "/Assignment3_NodeJS/static/js/422.96f95947.chunk.js",
+    "static/media/product_2.png": "/Assignment3_NodeJS/static/media/product_2.1bc52f8922d488cead68.png",
+    "static/media/product_3.png": "/Assignment3_NodeJS/static/media/product_3.48eda5293a6f605e73f7.png",
+    "static/media/product_4.png": "/Assignment3_NodeJS/static/media/product_4.6d83c6007d5109b357a8.png",
+    "static/media/product_1.png": "/Assignment3_NodeJS/static/media/product_1.b24c110a233df54143c8.png",
+    "static/media/product_5.png": "/Assignment3_NodeJS/static/media/product_5.b963def7555b7544d220.png",
+    "static/media/banner1.jpg": "/Assignment3_NodeJS/static/media/banner1.4a22881c941f7b645fa8.jpg",
+    "index.html": "/Assignment3_NodeJS/index.html",
+    "main.8aabc418.css.map": "/Assignment3_NodeJS/static/css/main.8aabc418.css.map",
+    "main.76de7015.js.map": "/Assignment3_NodeJS/static/js/main.76de7015.js.map",
+    "422.96f95947.chunk.js.map": "/Assignment3_NodeJS/static/js/422.96f95947.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8aabc418.css",
+    "static/js/main.76de7015.js"
+  ]
+}

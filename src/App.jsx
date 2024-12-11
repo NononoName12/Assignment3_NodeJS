@@ -2,7 +2,7 @@ import "./App.css";
 import "./css/custom.css";
 import "./css/style.default.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 import Footer from "./Share/Footer/Footer";
 import Header from "./Share/Header/Header";
 import Home from "./Home/Home";
@@ -36,6 +36,7 @@ function App() {
       <BrowserRouter>
         <UserProvider>
           <Header />
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/detail/:id" element={<Detail />} />

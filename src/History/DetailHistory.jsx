@@ -13,7 +13,7 @@ function DetailHistory(props) {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://backend-nodejs-lke6.onrender.com/orders/${id}`;
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {

@@ -52,7 +52,7 @@ function Header(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "http://localhost:5000/";
+        const url = "https://backend-nodejs-lke6.onrender.com/";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -71,6 +71,7 @@ function Header(props) {
         setLoginUser(data.isLoggedIn);
         setNameUser(data.user.fullName);
         setUser(data.user); // Cập nhật thông tin người dùng vào context
+        console.log(data);
         localStorage.setItem("User", data.user.email);
       } catch (error) {
         console.error("Error fetching products:", error);

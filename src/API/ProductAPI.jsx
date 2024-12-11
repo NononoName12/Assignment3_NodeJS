@@ -24,7 +24,7 @@
 
 const ProductAPI = {
   getAPI: async () => {
-    const url = "http://localhost:5000/";
+    const url = "https://backend-nodejs-lke6.onrender.com/";
     const response = await fetch(url, {
       method: "GET", // Chỉ định phương thức GET
       headers: {
@@ -76,7 +76,7 @@ const ProductAPI = {
   },
 
   getPagination: async (query) => {
-    const url = `http://localhost:5000/products/pagination${query}`;
+    const url = `https://backend-nodejs-lke6.onrender.com/products/pagination${query}`;
     const response = await fetch(url, {
       method: "GET",
       headers: {

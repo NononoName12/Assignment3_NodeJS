@@ -125,7 +125,7 @@ function Detail(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "http://localhost:5000/";
+        const url = "https://backend-nodejs-lke6.onrender.com/";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -178,7 +178,7 @@ function Detail(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = `http://localhost:5000/detail/${id}`; // URL của API lấy sản phẩm theo ID
+        const url = `https://backend-nodejs-lke6.onrender.com/detail/${id}`; // URL của API lấy sản phẩm theo ID
         const response = await fetch(url, {
           method: "GET", // Sử dụng phương thức GET
           headers: {
@@ -216,14 +216,17 @@ function Detail(props) {
     };
     console.log(data);
     try {
-      const response = await fetch("http://localhost:5000/cart", {
-        method: "POST", // Chỉ định phương thức POST
-        headers: {
-          "Content-Type": "application/json", // Đặt tiêu đề Content-Type nếu cần
-        },
-        body: JSON.stringify(data),
-        credentials: "include", // Bao gồm cookie trong yêu cầu
-      });
+      const response = await fetch(
+        "https://backend-nodejs-lke6.onrender.com/cart",
+        {
+          method: "POST", // Chỉ định phương thức POST
+          headers: {
+            "Content-Type": "application/json", // Đặt tiêu đề Content-Type nếu cần
+          },
+          body: JSON.stringify(data),
+          credentials: "include", // Bao gồm cookie trong yêu cầu
+        }
+      );
 
       const responseData = await response.json();
       if (!response.ok) {

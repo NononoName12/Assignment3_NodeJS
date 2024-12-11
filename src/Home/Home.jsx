@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import ProductAPI from "../API/ProductAPI";
 import Image from "../Share/img/Image";
 import convertMoney from "../convertMoney";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Home(props) {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -12,7 +13,7 @@ function Home(props) {
     const fetchData = async () => {
       setLoading(true); // Bắt đầu loading
       try {
-        const url = "http://localhost:5000/";
+        const url = "https://backend-nodejs-lke6.onrender.com/";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -42,6 +43,11 @@ function Home(props) {
 
     fetchData(); // Gọi hàm fetch khi component được mount
   }, []); // Chỉ chạy một lần khi component được mount
+
+  const handleViewDetail = (id) => {
+    console.log(id);
+    navigate(`/detail/${id}`);
+  };
 
   return (
     <div className="page-holder">
@@ -90,14 +96,21 @@ function Home(props) {
                           <p className="text-small mb-4">{value.short_desc}</p>
                           <div className="row align-items-stretch mb-4">
                             <div className="col-sm-5 pl-sm-0 fix_addwish">
-                              <a
+                              {/* <a
                                 className="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0"
                                 href={`/detail/${value._id}`}
                                 target="_blank"
                               >
                                 <i className="fa fa-shopping-cart"></i>
                                 <span className="ml-2">View Detail</span>
-                              </a>
+                              </a> */}
+                              <button
+                                className="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0"
+                                onClick={() => handleViewDetail(value._id)}
+                              >
+                                <i className="fa fa-shopping-cart"></i>
+                                <span className="ml-2">View Detail</span>
+                              </button>
                             </div>
                           </div>
                         </div>

@@ -40,7 +40,7 @@ function Cart(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "http://localhost:5000/cart";
+        const url = "https://backend-nodejs-lke6.onrender.com/cart";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -230,20 +230,23 @@ function Cart(props) {
 
   const onCheckout = async () => {
     try {
-      const response = await fetch("http://localhost:5000/cart/update", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userId: user._id,
-          cartItems: cart.map((item) => ({
-            productId: item.productId._id, // Lưu _id của sản phẩm
-            quantity: item.quantity, // Số lượng
-          })),
-        }),
-        credentials: "include", // Bao gồm cookie trong yêu cầu
-      });
+      const response = await fetch(
+        "https://backend-nodejs-lke6.onrender.com/cart/update",
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userId: user._id,
+            cartItems: cart.map((item) => ({
+              productId: item.productId._id, // Lưu _id của sản phẩm
+              quantity: item.quantity, // Số lượng
+            })),
+          }),
+          credentials: "include", // Bao gồm cookie trong yêu cầu
+        }
+      );
 
       if (!response.ok) {
         if (response.status === 400) {

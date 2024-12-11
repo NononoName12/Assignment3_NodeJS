@@ -12,10 +12,13 @@ function LoginLink(props) {
     // const action = deleteSession('');
     // dispatch(action);
     try {
-      const response = await fetch("http://localhost:5000/auth/logout", {
-        method: "POST",
-        credentials: "include", // Đảm bảo gửi cookie nếu cần
-      });
+      const response = await fetch(
+        "https://backend-nodejs-lke6.onrender.com/auth/logout",
+        {
+          method: "POST",
+          credentials: "include", // Đảm bảo gửi cookie nếu cần
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
