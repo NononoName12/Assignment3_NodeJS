@@ -9,6 +9,7 @@ const axiosClient = axios.create({
     "content-type": "application/json",
   },
   paramsSerializer: (params) => queryString.stringify(params),
+  withCredentials: true, // Bật gửi cookie cùng request
 });
 axiosClient.interceptors.request.use(async (config) => {
   // Handle token here ...

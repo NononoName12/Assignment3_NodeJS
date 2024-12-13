@@ -62,8 +62,8 @@ function SignIn(props) {
         throw new Error("Network response was not ok");
       }
       // return responseData;
-      navigate("/");
-      window.location.reload(); // Tự động làm mới trang chủ nếu cần
+      // navigate("/");
+      // window.location.reload(); // Tự động làm mới trang chủ nếu cần
     } catch (error) {
       console.error(
         "There has been a problem with your fetch operation:",

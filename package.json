@@ -27,6 +27,7 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://nonononame12.github.io/Assignment3_NodeJS/",
   "eslintConfig": {
     "extends": [
       "react-app",

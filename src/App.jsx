@@ -33,7 +33,7 @@ function App() {
         </Switch>{" "}
       </BrowserRouter> */}
 
-      <BrowserRouter>
+      <BrowserRouter basename="/Assignment3_NodeJS">
         <UserProvider>
           <Header />
 
