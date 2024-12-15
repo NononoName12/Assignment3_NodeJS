@@ -63,7 +63,7 @@ function SignIn(props) {
       }
       // return responseData;
       navigate("/");
-      // window.location.reload(); // Tự động làm mới trang chủ nếu cần
+      window.location.reload(); // Tự động làm mới trang chủ nếu cần
     } catch (error) {
       console.error(
         "There has been a problem with your fetch operation:",
