@@ -13,7 +13,7 @@ function MainHistory(props) {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const url = `https://backend-nodejs-lke6.onrender.com/orders?email=${emailUser}`;
+        const url = `https://backend-assignment3-odn0.onrender.com/orders?email=${emailUser}`;
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {

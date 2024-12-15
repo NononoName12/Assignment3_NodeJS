@@ -45,7 +45,7 @@ function SignIn(props) {
     console.log(inputLogin);
     try {
       const response = await fetch(
-        "https://backend-nodejs-lke6.onrender.com/auth/signin",
+        "https://backend-assignment3-odn0.onrender.com/auth/signin",
         {
           method: "POST", // Chỉ định phương thức POST
           headers: {
@@ -62,7 +62,7 @@ function SignIn(props) {
         throw new Error("Network response was not ok");
       }
       // return responseData;
-      // navigate("/");
+      navigate("/");
       // window.location.reload(); // Tự động làm mới trang chủ nếu cần
     } catch (error) {
       console.error(

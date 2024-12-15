@@ -13,7 +13,7 @@ function LoginLink(props) {
     // dispatch(action);
     try {
       const response = await fetch(
-        "https://backend-nodejs-lke6.onrender.com/auth/logout",
+        "https://backend-assignment3-odn0.onrender.com/auth/logout",
         {
           method: "POST",
           credentials: "include", // Đảm bảo gửi cookie nếu cần

@@ -52,7 +52,7 @@ function Header(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "https://backend-nodejs-lke6.onrender.com/";
+        const url = "https://backend-assignment3-odn0.onrender.com/";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {

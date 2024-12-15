@@ -5,7 +5,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import io from "socket.io-client";
 
-const socket = io("https://backend-nodejs-lke6.onrender.com/");
+const socket = io("https://backend-assignment3-odn0.onrender.com/");
 
 function Chat(props) {
   const [userID, setUserID] = useState(null);
@@ -42,7 +42,7 @@ function Chat(props) {
     const fetchData = async () => {
       setLoading(true); // Bắt đầu loading
       try {
-        const url = "https://backend-nodejs-lke6.onrender.com/";
+        const url = "https://backend-assignment3-odn0.onrender.com/";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {

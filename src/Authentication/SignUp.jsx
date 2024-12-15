@@ -52,7 +52,7 @@ function SignUp(props) {
     console.log(inputSignup);
     try {
       const response = await fetch(
-        "https://backend-nodejs-lke6.onrender.com/auth/signup",
+        "https://backend-assignment3-odn0.onrender.com/auth/signup",
         {
           method: "POST", // Chỉ định phương thức POST
           headers: {

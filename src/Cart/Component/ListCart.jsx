@@ -40,7 +40,7 @@ function ListCart(props) {
       console.log(userId, productId);
       try {
         const response = await fetch(
-          `https://backend-nodejs-lke6.onrender.com/cart/remove`,
+          `https://backend-assignment3-odn0.onrender.com/cart/remove`,
           {
             method: "POST", // Sử dụng phương thức POST
             headers: {

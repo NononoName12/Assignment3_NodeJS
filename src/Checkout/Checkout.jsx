@@ -65,7 +65,7 @@ function Checkout(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "https://backend-nodejs-lke6.onrender.com/cart";
+        const url = "https://backend-assignment3-odn0.onrender.com/cart";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -134,7 +134,7 @@ function Checkout(props) {
     console.log(inputOrder);
     try {
       const response = await fetch(
-        "https://backend-nodejs-lke6.onrender.com/checkout",
+        "https://backend-assignment3-odn0.onrender.com/checkout",
         {
           method: "POST", // Chỉ định phương thức POST
           headers: {

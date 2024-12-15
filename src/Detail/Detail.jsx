@@ -125,7 +125,7 @@ function Detail(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "https://backend-nodejs-lke6.onrender.com/";
+        const url = "https://backend-assignment3-odn0.onrender.com/";
         const response = await fetch(url, {
           method: "GET", // Chỉ định phương thức GET
           headers: {
@@ -178,7 +178,7 @@ function Detail(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = `https://backend-nodejs-lke6.onrender.com/detail/${id}`; // URL của API lấy sản phẩm theo ID
+        const url = `https://backend-assignment3-odn0.onrender.com/detail/${id}`; // URL của API lấy sản phẩm theo ID
         const response = await fetch(url, {
           method: "GET", // Sử dụng phương thức GET
           headers: {
@@ -217,7 +217,7 @@ function Detail(props) {
     console.log(data);
     try {
       const response = await fetch(
-        "https://backend-nodejs-lke6.onrender.com/cart",
+        "https://backend-assignment3-odn0.onrender.com/cart",
         {
           method: "POST", // Chỉ định phương thức POST
           headers: {
