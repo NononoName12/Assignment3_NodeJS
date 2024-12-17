@@ -44,10 +44,10 @@ function Home(props) {
     fetchData(); // Gọi hàm fetch khi component được mount
   }, []); // Chỉ chạy một lần khi component được mount
 
-  const handleViewDetail = (id) => {
-    console.log(id);
-    navigate(`/detail/${id}`);
-  };
+  // const handleViewDetail = (id) => {
+  //   console.log(id);
+  //   navigate(`/detail/${id}`);
+  // };
 
   return (
     <div className="page-holder">
@@ -96,21 +96,21 @@ function Home(props) {
                           <p className="text-small mb-4">{value.short_desc}</p>
                           <div className="row align-items-stretch mb-4">
                             <div className="col-sm-5 pl-sm-0 fix_addwish">
-                              {/* <a
+                              <a
                                 className="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0"
                                 href={`/detail/${value._id}`}
                                 target="_blank"
                               >
                                 <i className="fa fa-shopping-cart"></i>
                                 <span className="ml-2">View Detail</span>
-                              </a> */}
-                              <button
+                              </a>
+                              {/* <button
                                 className="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0"
                                 onClick={() => handleViewDetail(value._id)}
                               >
                                 <i className="fa fa-shopping-cart"></i>
                                 <span className="ml-2">View Detail</span>
-                              </button>
+                              </button> */}
                             </div>
                           </div>
                         </div>
