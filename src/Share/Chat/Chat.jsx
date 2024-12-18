@@ -22,17 +22,21 @@ function Chat(props) {
   // Hàm này dùng để mở hộp thoại chat
   const onChat = () => {
     setActiveChat(!activeChat);
-    if (!activeChat) {
-      if (roomId) {
-        socket.emit("joinRoom", { roomId, userId: "user" });
-      }
-      // Nếu chưa có roomId, tạo mới roomId
-      else {
+    if (userID != null) {
+      if (!activeChat) {
+        // if (roomId) {
+        //   socket.emit("joinRoom", { roomId, userId: "user" });
+        // }
+        // // Nếu chưa có roomId, tạo mới roomId
+        // else {
         const newRoomId = `room-${userID}`; // Tạo roomId dựa trên userId
         setRoomId(newRoomId);
         localStorage.setItem("roomId", newRoomId); // Lưu vào localStorage
         socket.emit("joinRoom", { roomId: newRoomId, userID });
+        // }
       }
+    } else {
+      alert("Please Login!");
     }
   };
 
