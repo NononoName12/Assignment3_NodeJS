@@ -26,6 +26,7 @@ function LoginLink(props) {
       } else {
         // Xử lý sau khi logout thành công
         localStorage.removeItem("User");
+        localStorage.removeItem("roomId");
         window.location.href = "/signin"; // Chuyển hướng đến trang login hoặc trang khác
       }
     } catch (error) {
