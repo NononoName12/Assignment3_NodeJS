@@ -21,8 +21,8 @@ function Chat(props) {
 
   // Hàm này dùng để mở hộp thoại chat
   const onChat = () => {
-    setActiveChat(!activeChat);
     if (userID != null) {
+      setActiveChat(!activeChat);
       if (!activeChat) {
         // if (roomId) {
         //   socket.emit("joinRoom", { roomId, userId: "user" });
